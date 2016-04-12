@@ -1,3 +1,8 @@
+This is a Sample I modified in order to reproduce an issue and post a question on stackoverflow: http://stackoverflow.com/questions/36498760/field-in-aspect-injected-after-its-first-use-causing-nullpointerexception-at-st
+
+
+Original README:
+
 Maven - Spring 3 MVC Hello World
 ===============================
 Template for Spring 3 MVC + JSP view + XML configuration, using Maven build tool.
