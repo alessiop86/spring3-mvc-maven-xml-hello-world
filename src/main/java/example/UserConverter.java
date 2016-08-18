@@ -6,13 +6,13 @@ import org.springframework.core.convert.converter.Converter;
 
 import java.io.IOException;
 
-public final class UserConverter implements Converter<String, Modello> {
+public final class UserConverter implements Converter<String, Modello[]> {
 
     private static ObjectMapper objectMapper = new ObjectMapper();
 
-    public Modello convert(String username) {
+    public Modello[] convert(String username) {
         try {
-            return objectMapper.readValue(username,Modello.class);
+            return objectMapper.readValue(username,Modello[].class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

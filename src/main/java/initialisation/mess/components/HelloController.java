@@ -18,8 +18,11 @@ public class HelloController {
 	}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String save(@RequestParam("mybean") Modello c) {
-        System.out.println(c);
+	public String save(@RequestParam("mybean") Modello[] c) {
+        System.out.println(c.length);
+        for (Modello c1 : c ) {
+            System.out.println(c1);
+        }
 		return "hello2";
 	}
 

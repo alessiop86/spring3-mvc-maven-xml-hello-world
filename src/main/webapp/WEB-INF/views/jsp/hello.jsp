@@ -65,7 +65,7 @@
 
 
  <form action="http://localhost:8080/spring3/save" method="post">
- <input type='text' value='{"superx": "3"}' name="mybean">
+ <input type='text' value='[{"superx": "3"},{"superx": "5"}]' name="mybean">
 <input type="submit" value="save">
 </form>
   <hr>
