@@ -62,8 +62,12 @@
 		</p>
 	</div>
   </div>
- 
- 
+
+
+ <form action="http://localhost:8080/spring3/save" method="post">
+ <input type='text' value='{"superx": "3"}' name="mybean">
+<input type="submit" value="save">
+</form>
   <hr>
   <footer>
 	<p>&copy; Mkyong.com 2015</p>
