@@ -10,9 +10,8 @@
 
 	<properties>
         <targetJdk>1.7</targetJdk>
-		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.version>4.1.4.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
-		<aspectj.version>1.7.0</aspectj.version>
 	</properties>
 	<dependencies>
 
@@ -40,74 +39,12 @@
             <version>${spring.version}</version>
         </dependency>
 
-		<!-- AspectJ -->
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>${aspectj.version}</version>
-		</dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
 
 	</dependencies>
 
 	<build>
 
 		<plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.4</version>
-                <configuration>
-                    <showWeaveInfo>true</showWeaveInfo>
-                    <source>${targetJdk}</source>
-                    <target>${targetJdk}</target>
-                    <Xlint>ignore</Xlint>
-                    <complianceLevel>${targetJdk}</complianceLevel>
-                    <encoding>UTF-8</encoding>
-                    <verbose>false</verbose>
-                    <aspectLibraries>
-                        <aspectLibrary>
-                            <groupId>org.springframework</groupId>
-                            <artifactId>spring-aspects</artifactId>
-                        </aspectLibrary>
-                    </aspectLibraries>
-
-                    <!--<outxml>true</outxml>-->
-                    <!--<Xlint>warning</Xlint>-->
-                    <!--<verbose>true</verbose>-->
-
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjrt</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjtools</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -129,6 +66,7 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.14.v20131031</version>
                 <configuration>
                     <webApp>
                         <contextPath>/spring3</contextPath>

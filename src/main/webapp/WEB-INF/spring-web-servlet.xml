@@ -26,7 +26,4 @@
 
     <mvc:annotation-driven/>
 
-    <bean class="initialisation.mess.aspects.AdditionalStuffAspect" factory-method="aspectOf">
-        <property name="service" ref="additionalStuffService" />
-    </bean>
 </beans>
