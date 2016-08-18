@@ -24,6 +24,15 @@
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven conversion-service="conversionService"/>
+
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="example.UserConverter"/>
+            </list>
+        </property>
+    </bean>
 
 </beans>

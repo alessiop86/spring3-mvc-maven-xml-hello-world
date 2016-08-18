@@ -16,4 +16,9 @@ public class Modello {
     public void setSuperx(int superx) {
         this.superx = superx;
     }
+
+    @Override
+    public String toString() {
+        return "SUPERX="+superx;
+    }
 }
